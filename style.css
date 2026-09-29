@@ -1,0 +1,220 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f7fa 0%,
+      #c3cfe2 100%
+    );
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  position: relative;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   UPLOAD SECTION
+========================================= */
+
+.upload-section {
+  background: white;
+
+  border-radius: 1rem;
+
+  padding: 2rem;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   DROP ZONE
+========================================= */
+
+#dropZone {
+  border: 2px dashed #d1d5db;
+
+  border-radius: 0.5rem;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+#dropZone:hover {
+  border-color: #2563eb;
+
+  background-color: #f8fafc;
+}
+
+
+#dropZone.dragover {
+  border-color: #2563eb;
+
+  background-color: #eff6ff;
+}
+
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+#preview {
+  text-align: center;
+}
+
+
+#preview img {
+  max-width: 100%;
+
+  max-height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 0.5rem;
+
+  margin: auto;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+#progress {
+  width: 0;
+
+  height: 10px;
+
+  background-color: #10b981;
+
+  border-radius: 5px;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.spinner {
+  width: 24px;
+
+  height: 24px;
+
+  border: 3px solid #f3f3f3;
+
+  border-top: 3px solid #10b981;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes spin {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.nutrition-value {
+  font-weight: 600;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 640px) {
+
+  .upload-section {
+    padding: 1.5rem;
+  }
+
+
+  .card {
+    padding: 1rem;
+  }
+
+
+  #dropZone {
+    padding: 1rem;
+  }
+
+
+  h1 {
+    font-size: 2rem;
+  }
+
+}
