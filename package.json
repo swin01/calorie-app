@@ -1,0 +1,25 @@
+{
+  "name": "ai-calorie-analyzer",
+  "version": "1.0.0",
+  "description": "AI-powered food calorie and nutrition analyzer",
+  "main": "index.html",
+  "scripts": {
+    "start": "firebase serve",
+    "deploy": "firebase deploy",
+    "dev": "firebase emulators:start"
+  },
+  "keywords": [
+    "ai",
+    "calorie",
+    "nutrition",
+    "food",
+    "groq",
+    "firebase",
+    "javascript"
+  ],
+  "author": "Aswin Mishra",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^11.10.0"
+  }
+}
